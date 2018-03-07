@@ -140,7 +140,10 @@ NOTE: Starting with Red Hat JBoss Data Virtualization 6.3.0 OData v4 is supporte
 image:demo-odata.png[]
 
 ==== How to access the data 
-When you have successfully deployed the Financials VDB into the JBoss Data Virtualization server, the OData protocol support is implicitly provided by the JBoss Data Virtualization server without any further configuration. 
+When you have successfully deployed the Financials VDB into the JBoss Data Virtualization server, the OData protocol support is implicitly provided by the JBoss Data Virtualization server without any further configuration.
+
+NOTE: You may need to add the roles odata and odata4 to the teiidUser in application-roles.properties if you get an error stating that the "Access to the requested resource has been denied"
+
 Now, open up a browser and point it to the following URL: http://localhost:8080/odata4/Financials.1/All_Customers/CUSTOMER. 
 If you are requested to type in a username/password enter teiidUser/redhat1!. This is similar to making a JDBC/ODBC connection and issuing a SQL call as 
 
